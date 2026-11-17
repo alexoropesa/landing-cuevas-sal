@@ -1,0 +1,167 @@
+/* =========================================================
+   Halita · Design tokens — documented in /Design.md
+   Do not hardcode visual values elsewhere; extend here + Design.md.
+   ========================================================= */
+:root {
+  /* ---- Color · surfaces ---- */
+  --bg-canvas: #F7F1EA;
+  --bg-surface: #FFFDFA;
+  --bg-subtle: #EFE5DA;
+  --bg-tint: #F3D9C4;
+  --bg-inverse: #3A2419;
+  --bg-inverse-deep: #24160F;
+  --bg-inverse-raised: rgba(255, 255, 255, 0.08);
+  --bg-scrim: rgba(36, 22, 15, 0.45);
+  --bg-image-scrim: linear-gradient(180deg, rgba(36, 22, 15, 0) 35%, rgba(36, 22, 15, 0.72) 100%);
+
+  /* ---- Color · text ---- */
+  --text-strong: #2A1A12;
+  --text-default: #4A3226;
+  --text-muted: rgba(42, 26, 18, 0.64);
+  --text-subtle: rgba(42, 26, 18, 0.46);
+  --text-disabled: rgba(42, 26, 18, 0.30);
+  --text-on-inverse: #FFFFFF;
+  --text-on-inverse-muted: rgba(255, 255, 255, 0.72);
+
+  /* ---- Color · borders ---- */
+  --border-hairline: rgba(58, 36, 25, 0.09);
+  --border-default: rgba(58, 36, 25, 0.16);
+  --border-strong: #3A2419;
+  --border-inverse: rgba(255, 255, 255, 0.12);
+
+  /* ---- Color · accents & states ---- */
+  --accent: #3A2419;
+  --accent-hover: #24160F;
+  --accent-link: #B5603A;
+  --accent-highlight: #E8A06A;
+  --rating: #D98B3A;
+  --success: #5E7A5C;
+  --success-bg: #EEF2EA;
+  --success-border: #DCE5D6;
+  --danger: #C8323F;
+  --danger-bg: #FDF0F1;
+  --focus-ring: 0 0 0 3px rgba(181, 96, 58, 0.35);
+
+  /* Photo stand-in (only warm surface — represents photography) */
+  --media-fallback: radial-gradient(120% 90% at 30% 20%, #F6C9A0 0%, #E59A6B 38%, #A9583A 70%, #4A2318 100%);
+
+  /* ---- Typography ---- */
+  --font-sans: "Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Fragment Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --fs-display: clamp(48px, 6.2vw, 90px);
+  --fs-h1: clamp(40px, 4.7vw, 68px);
+  --fs-h2: clamp(32px, 3.3vw, 48px);
+  --fs-h3: clamp(24px, 2.2vw, 32px);
+  --fs-h4: 22px;
+  --fs-lead: clamp(17px, 1.4vw, 20px);
+  --fs-body: 16px;
+  --fs-small: 14px;
+  --fs-micro: 12px;
+
+  --lh-display: 0.98;
+  --lh-h1: 1.01;
+  --lh-h2: 1.04;
+  --lh-h3: 1.1;
+  --lh-h4: 1.2;
+  --lh-lead: 1.45;
+  --lh-body: 1.5;
+
+  --ls-display: -0.06em;
+  --ls-h1: -0.055em;
+  --ls-h2: -0.045em;
+  --ls-h3: -0.04em;
+  --ls-h4: -0.035em;
+  --ls-tight: -0.01em;
+  --ls-micro: 0.04em;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* ---- Spacing (4px base) ---- */
+  --sp-1: 4px;
+  --sp-1-5: 6px;
+  --sp-2: 8px;
+  --sp-2-5: 10px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 50px;
+  --sp-15: 60px;
+  --sp-20: 80px;
+  --sp-30: 120px;
+
+  --section-py: var(--sp-30);
+  --gutter: var(--sp-8);
+  --card-p: var(--sp-6);
+  --head-gap: var(--sp-12);
+  --grid-gap: var(--sp-5);
+
+  /* ---- Layout ---- */
+  --container-max: 1440px;
+  --header-h: 64px;
+  --header-offset: 96px; /* header + inset, updated by JS */
+  --tabbar-h: 64px;
+  --modal-w: 560px;
+  --modal-w-lg: 880px;
+  --drawer-w: 440px;
+  --btn-h: 48px;
+  --btn-h-sm: 40px;
+  --input-h: 48px;
+  --measure: 62ch;
+
+  /* ---- Radius ---- */
+  --r-xs: 8px;
+  --r-sm: 14px;
+  --r-md: 16px;
+  --r-lg: 20px;
+  --r-xl: 24px;
+  --r-pill: 30px;
+
+  /* ---- Shadows (navy-tinted, from reference) ---- */
+  --shadow-1: 0 0.6px 0.6px -1.25px rgba(58, 36, 25, 0.02), 0 2.29px 2.29px -2.5px rgba(58, 36, 25, 0.02), 0 10px 10px -3.75px rgba(58, 36, 25, 0.01);
+  --shadow-2: 0 0.6px 0.6px -1.25px rgba(58, 36, 25, 0.04), 0 2.29px 2.29px -2.5px rgba(58, 36, 25, 0.04), 0 10px 10px -3.75px rgba(58, 36, 25, 0.02);
+  --shadow-3: 0 0.6px 0.6px -1.25px rgba(58, 36, 25, 0.06), 0 2.29px 2.29px -2.5px rgba(58, 36, 25, 0.05), 0 10px 10px -3.75px rgba(58, 36, 25, 0.02), 0 18px 32px -16px rgba(58, 36, 25, 0.12);
+  --shadow-pop: 0 0.6px 1.57px -1.5px rgba(0, 0, 0, 0.17), 0 2.29px 5.95px -3px rgba(0, 0, 0, 0.14), 0 10px 26px -4.5px rgba(0, 0, 0, 0.02);
+  --shadow-modal: 0 24px 64px -12px rgba(36, 22, 15, 0.28);
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 160ms;
+  --dur-base: 280ms;
+  --dur-slow: 520ms;
+
+  /* ---- Z-index ---- */
+  --z-content: 1;
+  --z-sticky: 20;
+  --z-header: 40;
+  --z-tabbar: 45;
+  --z-fab: 50;
+  --z-modal: 60;
+  --z-toast: 70;
+}
+
+@media (max-width: 1199px) {
+  :root {
+    --section-py: var(--sp-20);
+    --gutter: var(--sp-6);
+    --head-gap: var(--sp-10);
+  }
+}
+
+@media (max-width: 809px) {
+  :root {
+    --section-py: var(--sp-15);
+    --gutter: var(--sp-4);
+    --card-p: var(--sp-5);
+    --head-gap: var(--sp-8);
+    --grid-gap: var(--sp-4);
+    --header-h: 56px;
+    --fs-h4: 20px;
+  }
+}
